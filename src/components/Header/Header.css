@@ -8,17 +8,18 @@
     height: 3rem;
 }
 
-.header-menu{
+.header-menu, .menu-link{
     list-style: none;
     display: flex;
     gap: 2rem;
     color: white;
 }
 
-.header-menu>li:hover{
+.header-menu >li:hover  a.menu-link:hover{
     color: var(--orange);
     cursor: pointer;
 }
+
 
 .hero-text>div:nth-of-type(3){
     font-size: 1rem;
@@ -26,4 +27,25 @@
     text-transform: none;
     letter-spacing: 1px;
     width: 80%;
+}
+
+
+@media screen and (max-width: 768px){
+    .header>:nth-child(2){
+        position: fixed;
+        right: 2rem;
+        z-index: 99;
+    }
+
+    .header-menu{
+        flex-direction: column;
+        background-color: var(--appColor);
+        padding: 2rem;
+    }
+
+    .header-menu {
+        flex-direction: column;
+        background-color: var(--appColor); /* Ensure this variable is defined */
+        padding: 2rem;
+      }
 }
